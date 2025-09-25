@@ -21,6 +21,7 @@
             {
                 printf("Rainha Move para a esquerda\n");
                 Rainha++;
+                
             }
             
 
