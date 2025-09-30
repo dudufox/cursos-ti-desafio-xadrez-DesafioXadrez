@@ -3,7 +3,7 @@
     int main () {
 
 
-            int Torre=0, Bispo=0, Rainha=0; // Declaração das variáveis 
+            int Torre=0, Bispo=0, Rainha=0, Cavalo =1;// Declaração das variáveis 
 
             // Move a Torre 5 casas a direita Usando o FOR
 
@@ -21,7 +21,16 @@
             {
                 printf("Rainha Move para a esquerda\n");
                 Rainha++;
-                
+            
+            }
+
+            while (Cavalo--)
+            {
+                for (int i=0; i < 2; i++)
+                {
+                    printf("Cavalo movimenta-se para Cima\n"); // imprime Cima 2x 
+                }
+                    printf("Cavalo movimenta-se para Direita\n"); // Imprime Direita 1x
             }
             
 
