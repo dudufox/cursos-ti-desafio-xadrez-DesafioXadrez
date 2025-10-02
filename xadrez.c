@@ -1,40 +1,45 @@
 #include <stdio.h>
 
-    int main () {
-
-
-            int Torre=0, Bispo=0, Rainha=0, Cavalo =1;// Declaração das variáveis 
-
-            // Move a Torre 5 casas a direita Usando o FOR
-
-            for( Torre = 0; Torre < 5; Torre++)  { // Condição para execução do código
-                printf("Torre move para direita\n");
+        // Recursividade Movimentação da Torre
+        void Torre (int JogadaTorre){
+            if (JogadaTorre > 0){
+                printf("Torre move para a direita\n");
+                Torre(JogadaTorre - 1 );
             }
-            // Move o Bispo 5 casas a Cima e a Direita Usando o DO WHILE
-            do {
-                printf("Bispo move para Cima\n");
-                printf("Bispo move para Direita\n");
-                Bispo++;
-            }while (Bispo<5);
-            // Move a Rainha 8 casas a Esquerda Usando  WHILE
-            while (Rainha <8)
-            {
-                printf("Rainha Move para a esquerda\n");
-                Rainha++;
-            
+             }
+
+              // Recursividade Movimentação da Bispo
+             void Bispo (int JogadaBispo){
+            if (JogadaBispo > 0){
+                printf("Bispo move para Cima e direita\n");
+                Bispo(JogadaBispo - 1 );
             }
+             }
 
-            while (Cavalo--)
-            {
-                for (int i=0; i < 2; i++)
-                {
-                    printf("Cavalo movimenta-se para Cima\n"); // imprime Cima 2x 
-                }
-                    printf("Cavalo movimenta-se para Direita\n"); // Imprime Direita 1x
+
+            // Recursividade Movimentação da Rainha
+             void Rainha (int JogadaRainha){
+            if (JogadaRainha > 0){
+                printf("Rainha move para esquerda\n");
+                Rainha(JogadaRainha - 1 );
             }
-            
+             }
 
-            return 0;
-            
+            // Recursividade Movimentação da Cavalo
+             void Cavalo (int JogadaCavalo){
+            if (JogadaCavalo > 0){
+                printf("Cavalo move para Cima e Direita\n");
+                Cavalo(JogadaCavalo - 1 );
+            }
+             }
 
-    }
+            
+            int main () {
+                int JogadaB = 4, JogadaT = 5, JogadaR = 8, JogadaC = 1 ; // Variáveis, jogadas de cada peça
+                Torre(JogadaT); 
+                Bispo(JogadaB);
+                Rainha(JogadaR);
+                Cavalo(JogadaC);
+
+
+            }
